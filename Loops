@@ -1,0 +1,26 @@
+//Write a JavaScript conditional statement to find the largest of five numbers. Display an alert box to show the results.
+//Sample numbers : -5, -2, -6, 0, -1
+// Assuming you have five numbers stored in variables num1, num2, num3, num4, and num5
+
+var num1 = 10;
+var num2 = 5;
+var num3 = 8;
+var num4 = 15;
+var num5 = 12;
+
+var largest;
+
+if (num1 >= num2 && num1 >= num3 && num1 >= num4 && num1 >= num5) {
+    largest = num1;
+} else if (num2 >= num1 && num2 >= num3 && num2 >= num4 && num2 >= num5) {
+    largest = num2;
+} else if (num3 >= num1 && num3 >= num2 && num3 >= num4 && num3 >= num5) {
+    largest = num3;
+} else if (num4 >= num1 && num4 >= num2 && num4 >= num3 && num4 >= num5) {
+    largest = num4;
+} else {
+    largest = num5;
+}
+
+// Display the result in an alert box
+alert("The largest number is: " + largest);
