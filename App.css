@@ -1,58 +1,77 @@
-.body-content {
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
  
 }
 
-.module {
-  background-color :rgb(39, 76, 146);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 8px;
+label {
+  margin-bottom: 8px;
 }
 
-h1 {
-  text-align: center;
-  color: #333333;
+input {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.form {
+.remember-forgot-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.remember-me {
+  display: flex;
   align-items: center;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type="submit"] {
-  background-color: #e2e5e7;
-  color: white;
+.forgot-password {
+  color: #007bff;
   cursor: pointer;
 }
 
-/* Style the submit button on hover */
-input[type="submit"]:hover {
-  background-color: #203591;
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Style error messages */
-.alert-error {
-  color: #d1c5c5;
-  margin-bottom: 10px;
+button:hover {
+  background-color: #0056b3;
 }
 body {
   
-  background-image: url('https://i.pinimg.com/736x/a9/93/ef/a993efc08254df0a43527b9d6127255c.jpg');
+  background-image: url('https://roaringpartyz.co.uk/wp-content/uploads/2020/07/116706547_288647192394306_4038114867179590115_n.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
