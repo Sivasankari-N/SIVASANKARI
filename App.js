@@ -1,71 +1,41 @@
 import React, { useState } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Account from './components/Account';
+import About from './components/About';
+import Connect from './components/Connect';
+import Navbar from './components/Navbar';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
-const App = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+function App() {
+  const [user, setUser] = useState(null);
 
-  const handleLogin = () => {
-    // Add your login logic here
-    console.log('Logging in with:', email, password, 'Remember Me:', rememberMe);
+  const handleLogin = (userData) => {
+    setUser(userData);
   };
 
-  const handleRememberMeChange = () => {
-    setRememberMe(!rememberMe);
+  const handleSignup = (newUser) => {
+    setUser(newUser);
   };
 
-  const handleForgotPassword = () => {
-    // Add your forgot password logic here
-    console.log('Forgot Password clicked');
+  const updateUser = (updatedUser) => {
+    setUser(updatedUser);
   };
 
   return (
-    <div className="App">
-      <div className="login-container">
-        <h2>Login</h2>
-        <form>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <div className="remember-forgot-container">
-            <div className="remember-me">
-              <input
-                type="checkbox"
-                id="rememberMe"
-                checked={rememberMe}
-                onChange={handleRememberMeChange}
-              />
-              <label htmlFor="rememberMe">Remember Me</label>
-            </div>
-
-            <div className="forgot-password" onClick={handleForgotPassword}>
-              <span>Forgot Password?</span>
-            </div>
-          </div>
-
-          <button type="button" onClick={handleLogin}>
-            Login
-          </button>
-        </form>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+      <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/connect' element={<Connect />} />
+        <Route path='/account' element={<Account user={user} onUpdateUser={updateUser} />} />
+        <Route path='/login' element={<Login onLogin={handleLogin} />} />
+        <Route path='/signup' element={<Signup onSignup={handleSignup} />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
-export default App
+export default App;

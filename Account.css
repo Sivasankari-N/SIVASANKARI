@@ -1,0 +1,88 @@
+.account{
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  background-image: url('../assets/img-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:  white;
+}
+
+.Account-box {
+  width: 100%;
+  max-width: 500px; 
+  height: 25vw;
+  margin-left: 80px;
+  margin-right: 100px; /* Updated margin-right to push the box to the right */
+  margin-top: 6vw;
+  margin-bottom: 0;
+  padding-top: 80px;
+  border-radius: 2px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4);
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+
+}
+.Account-heading{
+  margin-left: 100px;
+}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  }
+
+.center-box ul {
+
+  list-style-type: none;
+}
+
+.center-box li {
+  font-size: larger;
+  padding-bottom: 20px;
+}
+
+#chnage {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#chnagelh {
+  margin-left: auto; /* Move PermIdentityIcon to the right */
+  margin-right: 55px; /* Adjust the margin-right value */
+}
+
+.MuiSvgIcon-root {
+  cursor: pointer;
+}
+
+#query-text {
+  margin-left: 120px;
+  margin-right: 120px; /* Center the text between the margins */
+}
+
+.welcome-text {
+  margin: 20px;
+  margin-left: auto; /* Move the welcome text to the left */
+  margin-right: 120px; 
+  margin-top: 10vw; /* Adjust the margin-right value */
+}
+
+.acc-head {
+  margin-left: auto; 
+  margin-right: 120px; 
+  margin-top: 8vw;
+}
+.security-info{
+  margin-top: 2vw;
+}
+
+/* Adjusted styles for the Edit button */
+.MuiButton-root {
+  font-size: 12px;
+  padding: 5px 15px;
+}

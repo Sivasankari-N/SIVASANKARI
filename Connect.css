@@ -1,0 +1,37 @@
+  
+  .contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url('../assets/img-5.jpg'); /* Add your background image path */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+  }
+  
+  .contact-form{
+    width: 400px;
+    padding: 20px;
+    color: white;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4);
+    z-index: 2; /* Adjust the transparency here */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* You may need to adjust the form styles based on your design */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .contact-form form button {
+    margin-top: 16px;
+  }
+  
+  /* Add your other styles as needed */
+  
